@@ -1,0 +1,1 @@
+execute as @s[scores={nbs_Eveningpar=5280..5400,nbs_Eveningpar_t=..65}] run function pixel_ninja:music/evening_party/notes/66

@@ -1,0 +1,2 @@
+execute as @a[tag=nbs_SuperMario] run scoreboard players operation @s nbs_SuperMario += speed nbs_SuperMario
+execute as @a[tag=nbs_SuperMario] at @s run function pixel_ninja:music/super_mario_bros_2_overworld_theme/tree/0_1023

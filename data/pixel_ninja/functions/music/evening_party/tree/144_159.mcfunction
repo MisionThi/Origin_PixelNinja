@@ -1,0 +1,2 @@
+execute as @s[scores={nbs_Eveningpar=11520..12200}] run function pixel_ninja:music/evening_party/tree/144_151
+execute as @s[scores={nbs_Eveningpar=12160..12920}] run function pixel_ninja:music/evening_party/tree/152_159

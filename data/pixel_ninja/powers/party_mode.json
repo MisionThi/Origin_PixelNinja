@@ -1,0 +1,210 @@
+{
+	"type": "origins:multiple",
+	
+	"active": {
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "function pixel_ninja:party_mode/summon"
+				},
+				{
+					"type": "origins:choice",
+					"actions": [
+						{
+							"element": {
+								"type": "origins:and",
+								"actions": [
+									{
+										"type": "origins:execute_command",
+										"command": "function pixel_ninja:party_mode/heads/group1"
+									}
+								]
+							},
+							"weight": 10
+						},
+						{
+							"element": {
+								"type": "origins:and",
+								"actions": [
+									{
+										"type": "origins:execute_command",
+										"command": "function pixel_ninja:party_mode/heads/group2"
+									}
+								]
+							},
+							"weight": 10
+						},
+						{
+							"element": {
+								"type": "origins:and",
+								"actions": [
+									{
+										"type": "origins:execute_command",
+										"command": "function pixel_ninja:party_mode/heads/group3"
+									}
+								]
+							},
+							"weight": 10
+						},
+						{
+							"element": {
+								"type": "origins:and",
+								"actions": [
+									{
+										"type": "origins:execute_command",
+										"command": "function pixel_ninja:party_mode/heads/group4"
+									}
+								]
+							},
+							"weight": 10
+						}
+					]
+				},
+				{
+					"type": "origins:choice",
+					"actions": [
+						{
+							"element": {
+								"type": "origins:and",
+								"actions": [
+									{
+										"type": "origins:execute_command",
+										"command": "function pixel_ninja:party_mode/outfits/theme1"
+									}
+								]
+							},
+							"weight": 10
+						},
+						{
+							"element": {
+								"type": "origins:and",
+								"actions": [
+									{
+										"type": "origins:execute_command",
+										"command": "function pixel_ninja:party_mode/outfits/theme2"
+									}
+								]
+							},
+							"weight": 10
+						},
+						{
+							"element": {
+								"type": "origins:and",
+								"actions": [
+									{
+										"type": "origins:execute_command",
+										"command": "function pixel_ninja:party_mode/outfits/theme3"
+									}
+								]
+							},
+							"weight": 10
+						},
+						{
+							"element": {
+								"type": "origins:and",
+								"actions": [
+									{
+										"type": "origins:execute_command",
+										"command": "function pixel_ninja:party_mode/outfits/theme4"
+									}
+								]
+							},
+							"weight": 10
+						}
+					]
+				},
+				{
+					"type": "origins:choice",
+					"actions": [
+						{
+							"element": {
+								"type": "origins:and",
+								"actions": [
+									{
+										"type": "origins:execute_command",
+										"command": "execute as @e[distance=0..10] at @s run function pixel_ninja:music/evening_party/play"
+									}
+								]
+							},
+							"weight": 10
+						},
+						{
+							"element": {
+								"type": "origins:and",
+								"actions": [
+									{
+										"type": "origins:execute_command",
+										"command": "execute as @e[distance=0..10] at @s run function pixel_ninja:music/sparta_minecraft_mix/play"
+									}
+								]
+							},
+							"weight": 10
+						},
+						{
+							"element": {
+								"type": "origins:and",
+								"actions": [
+									{
+										"type": "origins:execute_command",
+										"command": "execute as @e[distance=0..10] at @s run function pixel_ninja:music/mamma_mia/play"
+									}
+								]
+							},
+							"weight": 10
+						},
+						{
+							"element": {
+								"type": "origins:and",
+								"actions": [
+									{
+										"type": "origins:execute_command",
+										"command": "execute as @e[distance=0..10] at @s run function pixel_ninja:music/super_mario_bros_2_overworld_theme/play"
+									}
+								]
+							},
+							"weight": 10
+						}
+					]
+				}
+			]
+		},
+		"cooldown": 700,
+		"hud_render": {
+			"should_render": true,
+			"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_03.png",
+			"bar_index": 13,
+			"condition": {
+				"type": "origins:resource",
+				"resource": "*:change_mode_resource",
+				"comparison": "==",
+				"compare_to": 2
+			}
+		},
+		"key": {
+        "key": "key.origins.secondary_active",
+        "continuous": false
+    },
+		"condition": {
+			"type": "origins:resource",
+			"resource": "*:change_mode_resource",
+			"comparison": "==",
+			"compare_to": 2
+		}
+	},
+	
+	"no_natural_regen": {
+		"type": "origins:disable_regen",
+		"condition": {
+			"type": "origins:resource",
+			"resource": "*:change_mode_resource",
+			"comparison": "==",
+			"compare_to": 2
+		}
+		
+	},
+	"name": "§eP§aa§br§1t§5y §em§ao§bd§1e",
+	"description": "§2+ §rIn this mode you can press your §nsecondary key§r to summon a party!!\nThere are four different groups you can party with. When you summon the party a random group will be summoned in one of the four outfit themes.\nAlso there will be played a random number from one of the four numbers. When you enter the circle you will get some boosts.\n§4- §rYou will not heal naturally."
+}

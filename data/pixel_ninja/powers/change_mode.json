@@ -1,0 +1,250 @@
+{
+	"type": "origins:multiple",
+	
+	"call_back": {
+		"type": "origins:action_on_callback",
+    "entity_action_chosen": {
+        "type": "origins:execute_command",
+        "command": "function pixel_ninja:set_pixel_id",
+        "permission_level": 4
+    }
+	},
+	
+	"resource": {
+		"type": "origins:resource",
+		"min": 0,
+		"max": 2,
+		"hud_render": {
+			"should_render": true,
+			"sprite_location": "pixel:textures/gui/pixelninja_bars.png",
+			"bar_index": 0
+		}
+	},
+	
+	"change_mode":{
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "function thi_storage_lib:save_all"
+				},
+				{
+					"type": "origins:if_else",
+					"condition": {
+						"type": "origins:sneaking",
+						"inverted": true
+					},
+					"if_action": {
+						"type": "origins:if_else_list",
+						"actions": [
+							{
+								"condition": {
+									"type": "origins:resource",
+									"resource": "*:*_resource",
+									"comparison": "==",
+									"compare_to": 0
+								},
+								"action": {
+									"type": "origins:and",
+									"actions": [
+										{
+											"type": "origins:change_resource",
+											"resource": "*:*_resource",
+											"change": 1
+										},
+										{    
+											"type": "origins:execute_command",
+											"command": "scoreboard players set @s PlayerID 1"
+										},
+										{    
+											"type": "origins:execute_command",
+											"command": "scoreboard players operation @s PlayerID += @s pixel_id"
+										},
+																				{    
+											"type": "origins:execute_command",
+											"command": "title @s actionbar [\"\",{\"text\":\"Glitter\",\"color\":\"gold\"},{\"text\":\" mode\",\"color\":\"gray\"}]"
+										}
+									]
+								}
+							},
+							{
+								"condition": {
+									"type": "origins:resource",
+									"resource": "*:*_resource",
+									"comparison": "==",
+									"compare_to": 1
+								},
+								"action": {
+									"type": "origins:and",
+									"actions": [
+										{
+											"type": "origins:change_resource",
+											"resource": "*:*_resource",
+											"change": 1
+										},
+										{    
+											"type": "origins:execute_command",
+											"command": "title @a actionbar [\"\",{\"text\":\"P\",\"color\":\"red\"},{\"text\":\"a\",\"color\":\"dark_purple\"},{\"text\":\"r\",\"color\":\"gold\"},{\"text\":\"t\",\"color\":\"blue\"},{\"text\":\"y\",\"color\":\"green\"},\" mode\"]"
+										},
+										{    
+											"type": "origins:execute_command",
+											"command": "scoreboard players set @s PlayerID 2"
+										},
+										{    
+											"type": "origins:execute_command",
+											"command": "scoreboard players operation @s PlayerID += @s pixel_id"
+										}
+									]
+								}
+							},
+							{
+								"condition": {
+									"type": "origins:resource",
+									"resource": "*:*_resource",
+									"comparison": "==",
+									"compare_to": 2
+								},
+								"action": {
+									"type": "origins:and",
+									"actions": [
+										{
+											"type": "origins:change_resource",
+											"resource": "*:*_resource",
+											"change": -2
+										},
+										{    
+											"type": "origins:execute_command",
+											"command": "scoreboard players set @s PlayerID 0"
+										},
+										{    
+											"type": "origins:execute_command",
+											"command": "scoreboard players operation @s PlayerID += @s pixel_id"
+										},
+										{    
+											"type": "origins:execute_command",
+											"command": "title @s actionbar {\"text\":\"Ninja mode\",\"color\":\"black\"}"
+										}
+									]
+								}
+							}
+						]
+					},
+					"else_action": {
+						"type": "origins:if_else_list",
+						"actions": [
+							{
+								"condition": {
+									"type": "origins:resource",
+									"resource": "*:*_resource",
+									"comparison": "==",
+									"compare_to": 0
+								},
+								"action": {
+									"type": "origins:and",
+									"actions": [
+										{
+											"type": "origins:change_resource",
+											"resource": "*:*_resource",
+											"change": 2
+										},
+										{    
+											"type": "origins:execute_command",
+											"command": "title @a actionbar [\"\",{\"text\":\"P\",\"color\":\"red\"},{\"text\":\"a\",\"color\":\"dark_purple\"},{\"text\":\"r\",\"color\":\"gold\"},{\"text\":\"t\",\"color\":\"blue\"},{\"text\":\"y\",\"color\":\"green\"},\" mode\"]"
+										},
+										{    
+											"type": "origins:execute_command",
+											"command": "scoreboard players set @s PlayerID 2"
+										},
+										{    
+											"type": "origins:execute_command",
+											"command": "scoreboard players operation @s PlayerID += @s pixel_id"
+										}
+									]
+								}
+							},
+							{
+								"condition": {
+									"type": "origins:resource",
+									"resource": "*:*_resource",
+									"comparison": "==",
+									"compare_to": 1
+								},
+								"action": {
+									"type": "origins:and",
+									"actions": [
+										{
+											"type": "origins:change_resource",
+											"resource": "*:*_resource",
+											"change": -1
+										},
+										{    
+											"type": "origins:execute_command",
+											"command": "scoreboard players set @s PlayerID 0"
+										},
+										{    
+											"type": "origins:execute_command",
+											"command": "scoreboard players operation @s PlayerID += @s pixel_id"
+										},
+										{    
+											"type": "origins:execute_command",
+											"command": "title @s actionbar {\"text\":\"Ninja mode\",\"color\":\"black\"}"
+										}
+									]
+								}
+							},
+							{
+								"condition": {
+									"type": "origins:resource",
+									"resource": "*:*_resource",
+									"comparison": "==",
+									"compare_to": 2
+								},
+								"action": {
+									"type": "origins:and",
+									"actions": [
+										{
+											"type": "origins:change_resource",
+											"resource": "*:*_resource",
+											"change": -1
+										},
+										{    
+											"type": "origins:execute_command",
+											"command": "scoreboard players set @s PlayerID 1"
+										},
+										{    
+											"type": "origins:execute_command",
+											"command": "scoreboard players operation @s PlayerID += @s pixel_id"
+										},
+										{    
+											"type": "origins:execute_command",
+											"command": "title @s actionbar [\"\",{\"text\":\"Glitter\",\"color\":\"gold\"},{\"text\":\" mode\",\"color\":\"gray\"}]"
+										}
+									]
+								}
+							}
+						]
+					}
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "function thi_storage_lib:restore_all"
+				}
+			]
+			
+		},
+		"cooldown": 500,
+		"hud_render": {
+			"should_render": true,
+			"bar_index": 16,
+			"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_01.png"
+		},
+		"key": {
+        "key": "key.origins.primary_active",
+        "continuous": false
+    }
+	},
+	"name": "Changer!",
+	"description": "§rThis is the main power from the origins where everything is based on. It let's you switch between three different modes: §0ninja mode, §6glitter §7mode §rand §ep§aa§br§1t§5y §em§ao§bd§1e §5:D§r.\n§rYou have to rember that every mode has his own indidual inventory, so rember that when you're switching.\nWhen you press your §nprimary key§r you switch to the mode next inline. When you §nshift§r and press your §nsecondary key§r you switch to the mode that was inline before that.\n"
+}

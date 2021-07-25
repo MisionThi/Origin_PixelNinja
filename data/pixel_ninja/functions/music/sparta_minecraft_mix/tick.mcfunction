@@ -1,0 +1,2 @@
+execute as @a[tag=nbs_SpartaMine] run scoreboard players operation @s nbs_SpartaMine += speed nbs_SpartaMine
+execute as @a[tag=nbs_SpartaMine] at @s run function pixel_ninja:music/sparta_minecraft_mix/tree/0_1023

@@ -1,0 +1,583 @@
+{
+	"type": "origins:multiple",
+	
+	"active": {
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:if_else_list",
+					"actions": [
+						{
+							"condition": {
+								"type": "origins:and",
+								"conditions": [
+									{
+										"type": "origins:sneaking",
+										"inverted": true
+									},
+									{
+										"type": "origins:resource",
+										"resource": "*:*_boost_bar",
+										"comparison": ">=",
+										"compare_to": 28
+									},
+									{
+										"type": "origins:resource",
+										"resource": "*:*_boost_bar",
+										"comparison": "<",
+										"compare_to": 57
+									}
+								]
+							},
+							"action": {
+								"type": "origins:add_velocity",
+								"z": 1,
+								"space": "local"
+							
+							}
+						},
+						{
+							"condition": {
+								"type": "origins:and",
+								"conditions": [
+									{
+										"type": "origins:sneaking",
+										"inverted": true
+									},
+									{
+										"type": "origins:resource",
+										"resource": "*:*_boost_bar",
+										"comparison": ">=",
+										"compare_to": 57
+									},
+									{
+										"type": "origins:resource",
+										"resource": "*:*_boost_bar",
+										"comparison": "<",
+										"compare_to": 86
+									}
+								]
+							},
+							"action": {
+								"type": "origins:add_velocity",
+								"z": 2,
+								"space": "local"
+							
+							}
+						},
+						{
+							"condition": {
+								"type": "origins:and",
+								"conditions": [
+									{
+										"type": "origins:sneaking",
+										"inverted": true
+									},
+									{
+										"type": "origins:resource",
+										"resource": "*:*_boost_bar",
+										"comparison": ">=",
+										"compare_to": 86
+									},
+									{
+										"type": "origins:resource",
+										"resource": "*:*_boost_bar",
+										"comparison": "<",
+										"compare_to": 114
+									}
+								]
+							},
+							"action": {
+								"type": "origins:add_velocity",
+								"z": 3,
+								"space": "local"
+							
+							}
+						},
+						{
+							"condition": {
+								"type": "origins:and",
+								"conditions": [
+									{
+										"type": "origins:sneaking",
+										"inverted": true
+									},
+									{
+										"type": "origins:resource",
+										"resource": "*:*_boost_bar",
+										"comparison": ">=",
+										"compare_to": 114
+									},
+									{
+										"type": "origins:resource",
+										"resource": "*:*_boost_bar",
+										"comparison": "<",
+										"compare_to": 143
+									}
+								]
+							},
+							"action": {
+								"type": "origins:add_velocity",
+								"z": 4,
+								"space": "local"
+							
+							}
+						},
+						{
+							"condition": {
+								"type": "origins:and",
+								"conditions": [
+									{
+										"type": "origins:sneaking",
+										"inverted": true
+									},
+									{
+										"type": "origins:resource",
+										"resource": "*:*_boost_bar",
+										"comparison": ">=",
+										"compare_to": 143
+									},
+									{
+										"type": "origins:resource",
+										"resource": "*:*_boost_bar",
+										"comparison": "<",
+										"compare_to": 171
+									}
+								]
+							},
+							"action": {
+								"type": "origins:add_velocity",
+								"z": 5,
+								"space": "local"
+							
+							}
+						},
+						{
+							"condition": {
+								"type": "origins:and",
+								"conditions": [
+									{
+										"type": "origins:sneaking",
+										"inverted": true
+									},
+									{
+										"type": "origins:resource",
+										"resource": "*:*_boost_bar",
+										"comparison": ">=",
+										"compare_to": 171
+									},
+									{
+										"type": "origins:resource",
+										"resource": "*:*_boost_bar",
+										"comparison": "<=",
+										"compare_to": 200
+									}
+								]
+							},
+							"action": {
+								"type": "origins:add_velocity",
+								"z": 6,
+								"space": "local"
+							
+							}
+						},
+						
+						
+						{
+							"condition": {
+								"type": "origins:and",
+								"conditions": [
+									{
+										"type": "origins:sneaking",
+										"inverted": false
+									},
+									{
+										"type": "origins:resource",
+										"resource": "*:*_boost_bar",
+										"comparison": ">=",
+										"compare_to": 28
+									},
+									{
+										"type": "origins:resource",
+										"resource": "*:*_boost_bar",
+										"comparison": "<",
+										"compare_to": 57
+									}
+								]
+							},
+							"action": {
+								"type": "origins:add_velocity",
+								"z": -1,
+								"space": "local"
+							
+							}
+						},
+						{
+							"condition": {
+								"type": "origins:and",
+								"conditions": [
+									{
+										"type": "origins:sneaking",
+										"inverted": false
+									},
+									{
+										"type": "origins:resource",
+										"resource": "*:*_boost_bar",
+										"comparison": ">=",
+										"compare_to": 57
+									},
+									{
+										"type": "origins:resource",
+										"resource": "*:*_boost_bar",
+										"comparison": "<",
+										"compare_to": 86
+									}
+								]
+							},
+							"action": {
+								"type": "origins:add_velocity",
+								"z": -2,
+								"space": "local"
+							
+							}
+						},
+						{
+							"condition": {
+								"type": "origins:and",
+								"conditions": [
+									{
+										"type": "origins:sneaking",
+										"inverted": false
+									},
+									{
+										"type": "origins:resource",
+										"resource": "*:*_boost_bar",
+										"comparison": ">=",
+										"compare_to": 86
+									},
+									{
+										"type": "origins:resource",
+										"resource": "*:*_boost_bar",
+										"comparison": "<",
+										"compare_to": 114
+									}
+								]
+							},
+							"action": {
+								"type": "origins:add_velocity",
+								"z": -3,
+								"space": "local"
+							
+							}
+						},
+						{
+							"condition": {
+								"type": "origins:and",
+								"conditions": [
+									{
+										"type": "origins:sneaking",
+										"inverted": false
+									},
+									{
+										"type": "origins:resource",
+										"resource": "*:*_boost_bar",
+										"comparison": ">=",
+										"compare_to": 114
+									},
+									{
+										"type": "origins:resource",
+										"resource": "*:*_boost_bar",
+										"comparison": "<",
+										"compare_to": 143
+									}
+								]
+							},
+							"action": {
+								"type": "origins:add_velocity",
+								"z": -4,
+								"space": "local"
+							
+							}
+						},
+						{
+							"condition": {
+								"type": "origins:and",
+								"conditions": [
+									{
+										"type": "origins:sneaking",
+										"inverted": false
+									},
+									{
+										"type": "origins:resource",
+										"resource": "*:*_boost_bar",
+										"comparison": ">=",
+										"compare_to": 143
+									},
+									{
+										"type": "origins:resource",
+										"resource": "*:*_boost_bar",
+										"comparison": "<",
+										"compare_to": 171
+									}
+								]
+							},
+							"action": {
+								"type": "origins:add_velocity",
+								"z": -5,
+								"space": "local"
+							
+							}
+						},
+						{
+							"condition": {
+								"type": "origins:and",
+								"conditions": [
+									{
+										"type": "origins:sneaking",
+										"inverted": false
+									},
+									{
+										"type": "origins:resource",
+										"resource": "*:*_boost_bar",
+										"comparison": ">=",
+										"compare_to": 171
+									},
+									{
+										"type": "origins:resource",
+										"resource": "*:*_boost_bar",
+										"comparison": "<=",
+										"compare_to": 200
+									}
+								]
+							},
+							"action": {
+								"type": "origins:add_velocity",
+								"z": -6,
+								"space": "local"
+							
+							}
+						}
+					]
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "*:*_boost_bar",
+					"change": -200
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "*:*_not_shifting_bar",
+					"change": -50	
+				}
+			]
+		},
+		"cooldown": 20,
+		"hud_render": {
+			"should_render": false
+		},
+		"key": {
+        "key": "key.origins.secondary_active",
+        "continuous": false
+    },
+		"condition": {
+			"type": "origins:resource",
+			"resource": "*:change_mode_resource",
+			"comparison": "==",
+			"compare_to": 0
+		}
+	},
+	
+	"boost_bar": {
+		"type": "origins:resource",
+		"min": 0,
+		"max": 200,
+		"hud_render": {
+			"should_render": true,
+			"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_03.png",
+			"bar_index": 23,
+			"condition": {
+				"type": "origins:resource",
+				"resource": "*:change_mode_resource",
+				"comparison": "==",
+				"compare_to": 0
+			}
+		}
+	},
+	
+	"fill_boost": {
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:change_resource",
+			"resource": "*:*_boost_bar",
+			"change": 1	
+		},
+		"cooldown": 0,
+		"hud_render": {
+				"should_render": false
+		},
+		"key": {
+			"key": "key.sneak",
+			"continuous": true		
+		}
+	},
+	
+	"not_shifting_bar": {
+		"type": "origins:resource",
+		"min": 0,
+		"max": 50,
+		"hud_render": {
+			"should_render": false
+		},
+		"max_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:if_else",
+					"condition": {
+						"type": "origins:resource",
+						"resource": "*:*_boost_bar",
+						"comparison": ">=",
+						"compare_to": 75
+					},
+					"if_action": {
+						"type": "origins:change_resource",
+						"resource": "*:*_non_boost_bar",
+						"change": 1
+					}
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "*:*_not_shifting_bar",
+					"change": -50
+				},
+				{    
+					"type": "origins:change_resource",
+					"resource": "*:*_boost_bar",
+					"change": -200
+				}
+			]
+		}
+	},
+	
+	"not_shifting": {
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:change_resource",
+			"resource": "*:*_not_shifting_bar",
+			"change": 1
+		},
+		"interval": 1,
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "*:change_mode_resource",
+					"comparison": "==",
+					"compare_to": 0
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:*_boost_bar",
+					"comparison": ">=",
+					"compare_to": 1
+				},
+				{
+					"type": "origins:sneaking",
+					"inverted": true
+				}
+			]
+		}
+	},
+	
+	"non_boost_bar": {
+		"type": "origins:resource",
+		"min": 0,
+		"max": 1,
+		"hud_render": {
+			"should_render": false
+		}	
+	},
+	
+	"non_boost_d": {
+		"type": "origins:damage_over_time",
+		"interval": 30,
+		"damage": 1,
+		"damage_source": {
+			"name": "generic",
+			"unblockable": true,
+			"bypasses_armor": true
+		},
+		"condition": {
+			"type": "origins:resource",
+			"resource": "*:*_non_boost_bar",
+			"comparison": "==",
+			"compare_to": 1	
+		}
+	},
+	
+	"non_boost_sprint": {
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:change_resource",
+			"resource": "*:*_non_boost_bar",
+			"change": -1	
+		},
+		"cooldown": 0,
+		"hud_render": {
+				"should_render": false
+		},
+		"key": {
+			"key": "key.sprint",
+			"continuous": true		
+		},
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "*:change_mode_resource",
+					"comparison": "==",
+					"compare_to": 0
+				},
+				{
+					"type": "origins:moving"
+				}
+			]
+		}
+	},
+	
+	"non_boost_jump": {
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:change_resource",
+			"resource": "*:*_non_boost_bar",
+			"change": -1	
+		},
+		"cooldown": 0,
+		"hud_render": {
+				"should_render": false
+		},
+		"key": {
+			"key": "key.jump",
+			"continuous": false		
+		},
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "*:change_mode_resource",
+					"comparison": "==",
+					"compare_to": 0
+				}
+			]
+		}
+	},
+	
+	
+	"name": "§0Ninja mode",
+	"description": "§2+ §rWhen you shift in this mode you will see a bar fill up. How fuller the bar is the more powerful your power will be when you press your §secondary key§r.\n§4- §rWhen you fill the bar more than 38% and don't use the power-up. You feel the cramp in your legs and start getting damage. You can loosen up your legs by sprinting or jumping.\n"
+}

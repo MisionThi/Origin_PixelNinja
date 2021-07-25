@@ -1,0 +1,21 @@
+{
+	"powers": [
+	"pixel_ninja:change_mode",
+	"pixel_ninja:ninja_mode",
+	"pixel_ninja:glitter_mode",
+	"pixel_ninja:party_mode"
+	
+	
+
+	],
+	"unchoosable": false,
+	"icon": {
+		"item": "minecraft:knowledge_book",
+		"tag": "{CustomModelData:2001}"
+	},
+	"order": 13,
+	"impact": 0,
+	"name": "Pixel Ninja",
+	"description": "This origin was made in honor of the event in the cooler off-topic server.\nHere by I present the Pixel Ninja origin :D\nMade by mision_thi"
+}
+

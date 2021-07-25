@@ -1,0 +1,451 @@
+{
+	"type": "origins:multiple",
+	
+	"active": {
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:choice",
+					"actions": [
+						{
+							"element": {
+								"type": "origins:and",
+								"actions": [
+									{
+										"type": "origins:execute_command",
+										"command": "execute as @s at @s anchored eyes run summon firework_rocket ^ ^ ^5 {LifeTime:5,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:0,Trail:1b,Colors:[I;16711680,2883456]}]}}}}"
+									}
+								]
+							},
+							"weight": 10
+						},
+						{
+							"element": {
+								"type": "origins:and",
+								"actions": [
+									{
+										"type": "origins:execute_command",
+										"command": "execute as @s at @s anchored eyes run summon firework_rocket ^ ^ ^5 {LifeTime:5,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:0,Trail:1b,Colors:[I;15023615,14270463],FadeColors:[I;8018431]}]}}}}"
+									}
+								]
+							},
+							"weight": 10
+						},
+						{
+							"element": {
+								"type": "origins:and",
+								"actions": [
+									{
+										"type": "origins:execute_command",
+										"command": "execute as @s at @s anchored eyes run summon firework_rocket ^ ^ ^5 {LifeTime:5,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:0,Trail:1b,Colors:[I;16318267,16755740],FadeColors:[I;16736827]}]}}}}"
+									}
+								]
+							},
+							"weight": 10
+						},
+						{
+							"element": {
+								"type": "origins:and",
+								"actions": [
+									{
+										"type": "origins:execute_command",
+										"command": "execute as @s at @s anchored eyes run summon firework_rocket ^ ^ ^5 {LifeTime:5,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:0,Trail:1b,Colors:[I;2424831,5550079],FadeColors:[I;8236543]}]}}}}"
+									}
+								]
+							},
+							"weight": 10
+						},
+						{
+							"element": {
+								"type": "origins:and",
+								"actions": [
+									{
+										"type": "origins:execute_command",
+										"command": "execute as @s at @s anchored eyes run summon firework_rocket ^ ^ ^5 {LifeTime:5,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:0,Trail:1b,Colors:[I;16252695,2752281,1376255,1549055,12654591],FadeColors:[I;12172623,2607374,1169110,1145021,8458155]}]}}}}"
+									}
+								]
+							},
+							"weight": 10
+						},
+						{
+							"element": {
+								"type": "origins:and",
+								"actions": [
+									{
+										"type": "origins:execute_command",
+										"command": "execute as @s at @s anchored eyes run summon firework_rocket ^ ^ ^5 {LifeTime:5,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:0,Trail:1b,Colors:[I;16733297,16152831]}]}}}}"
+									}
+								]
+							},
+							"weight": 10
+						},
+						{
+							"element": {
+								"type": "origins:and",
+								"actions": [
+									{
+										"type": "origins:execute_command",
+										"command": "execute as @s at @s anchored eyes run summon firework_rocket ^ ^ ^5 {LifeTime:5,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:0,Trail:1b,Colors:[I;3604278,8781733]}]}}}}"
+									}
+								]
+							},
+							"weight": 10
+						},
+						{
+							"element": {
+								"type": "origins:and",
+								"actions": [
+									{
+										"type": "origins:execute_command",
+										"command": "execute as @s at @s anchored eyes run summon firework_rocket ^ ^ ^5 {LifeTime:5,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:0,Trail:1b,Colors:[I;1668377,3721620,4062989],FadeColors:[I;4062989]}]}}}}"
+									}
+								]
+							},
+							"weight": 10
+						},
+						{
+							"element": {
+								"type": "origins:and",
+								"actions": [
+									{
+										"type": "origins:execute_command",
+										"command": "execute as @s at @s anchored eyes run summon firework_rocket ^ ^ ^5 {LifeTime:5,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:0,Trail:1b,Colors:[I;16752934,9723158,16761950],FadeColors:[I;16750297]}]}}}}"
+									}
+								]
+							},
+							"weight": 10
+						}
+					]
+				},
+				{    
+					"type": "origins:change_resource",
+					"resource": "*:*_fire_work_storage",
+					"change": -1
+				}
+			]
+		},
+		"cooldown": 0,
+		"hud_render": {
+				"should_render": false
+		},
+		"key": {
+				"key": "key.origins.secondary_active",
+				"continuous": false
+		},
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "*:change_mode_resource",
+					"comparison": "==",
+					"compare_to": 1
+				},
+				{      
+					"type": "origins:sneaking",
+					"inverted": true
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:*_fire_work_storage",
+					"comparison": ">",
+					"compare_to": 0
+				}
+			]
+		}		
+	},
+	
+	"fire_work_storage": {
+		"type": "origins:resource",
+    "min": 0,
+    "max": 7,
+		"start_value": 7,
+    "hud_render": {
+			"should_render": true,	
+			"sprite_location": "pixel:textures/gui/pixels.png",
+			"bar_index": 0,
+			"condition": {
+				"type": "origins:resource",
+				"resource": "*:change_mode_resource",
+				"comparison": "==",
+				"compare_to": 1
+			}
+		}
+	},
+	
+	"load_manually": {
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:if_else_list",
+					"actions": [
+						{
+							"condition": {
+								"type": "origins:and",
+								"conditions": [
+									{
+										"type": "origins:equipped_item",
+										"equipment_slot": "offhand",
+										"item_condition": {
+											"type": "origins:ingredient",
+											"ingredient": {
+													"item": "minecraft:firework_rocket"
+											}
+										}
+									},
+									{      
+										"type": "origins:resource",
+										"resource": "*:*_fire_work_storage",
+										"comparison": "<",
+										"compare_to": 7
+									}
+								]
+							},
+							"action": {
+								"type": "origins:and",
+								"actions": [
+									{    
+										"type": "origins:change_resource",
+										"resource": "*:*_fire_work_storage",
+										"change": 1
+									},
+									{
+										"type": "origins:equipped_item_action",
+										"equipment_slot": "offhand",
+										"action": {
+												"type": "origins:consume",
+												"amount": 1
+										}
+									},
+									{
+										"type": "origins:execute_command",
+										"command": "title @s actionbar {\"text\":\"Added 1 firework to the bar\",\"color\":\"dark_green\"}"
+									}
+								]
+							}
+						},
+						{
+							"condition": {
+								"type": "origins:and",
+								"conditions": [
+									{
+										"type": "origins:equipped_item",
+										"equipment_slot": "offhand",
+										"item_condition": {
+											"type": "origins:ingredient",
+											"ingredient": {
+													"item": "minecraft:firework_rocket"
+											},
+											"inverted": true
+										}
+									},
+									{      
+										"type": "origins:resource",
+										"resource": "*:*_fire_work_storage",
+										"comparison": "<",
+										"compare_to": 7
+									}
+								]
+							},
+							"action": {
+								"type": "origins:and",
+								"actions": [
+									{
+										"type": "origins:execute_command",
+										"command": "title @s actionbar [\"\",{\"text\":\"You need a firework in your \",\"color\":\"red\"},{\"text\":\"off-hand \",\"underlined\":true},{\"text\":\"to fill the bar.\",\"color\":\"red\"}]"
+									}
+								]
+							}
+						},
+						{
+							"condition": {
+								"type": "origins:and",
+								"conditions": [
+									{      
+										"type": "origins:resource",
+										"resource": "*:*_fire_work_storage",
+										"comparison": "==",
+										"compare_to": 7
+									}
+								]
+							},
+							"action": {
+								"type": "origins:and",
+								"actions": [
+									{
+										"type": "origins:execute_command",
+										"command": "title @s actionbar {\"text\":\"You can't add more your bar is already full\",\"color\":\"red\"}"
+									}
+								]
+							}
+						}
+					]
+				}
+			]
+		},
+		"cooldown": 0,
+		"hud_render": {
+				"should_render": false
+		},
+		"key": {
+				"key": "key.origins.secondary_active",
+				"continuous": false
+		},
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "*:change_mode_resource",
+					"comparison": "==",
+					"compare_to": 1
+				},
+				{      
+					"type": "origins:sneaking",
+					"inverted": false
+				}
+			]
+		}		
+	},
+	
+	"load_automatic": {
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:change_resource",
+					"resource": "*:*_fire_work_storage",
+					"change": 1
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "title @s actionbar {\"text\":\"Added 1 firework to the bar\",\"color\":\"dark_green\"}"
+				}
+			]
+		},
+		"interval": 600,
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "*:change_mode_resource",
+					"comparison": "==",
+					"compare_to": 1
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:*_fire_work_storage",
+					"comparison": "<",
+					"compare_to": 7
+				}
+			]
+		}
+	},
+	
+	"gliter_stuck": {
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:chance",
+			"action": {
+				"type": "origins:change_resource",
+				"resource": "*:*_glitter_stuck_r",
+				"change": 1	
+			},
+			"chance": 0.15
+		},
+		"interval": 1200,
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "*:change_mode_resource",
+					"comparison": "==",
+					"compare_to": 1
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:*_glitter_stuck_r",
+					"comparison": "==",
+					"compare_to": 0
+				}
+			]
+		}
+	},
+	
+	"glitter_stuck_r": {
+		"type": "origins:resource",
+    "min": 0,
+    "max": 1,
+    "hud_render": {
+        "should_render": false
+    }	
+	},
+	
+	"gliter_stuck_g": {
+		"type": "origins:self_action_when_hit",
+		"entity_action": {
+			"type": "origins:change_resource",
+			"resource": "*:*_glitter_stuck_r",
+			"change": -1	
+		},
+		"damage_condition": {
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:name",
+					"name": "fall"
+				},
+				{    
+					"type": "origins:name",
+					"name": "player"
+				}
+			]
+		},
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "*:change_mode_resource",
+					"comparison": "==",
+					"compare_to": 1
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:*_glitter_stuck_r",
+					"comparison": "==",
+					"compare_to": 1
+				}
+			]
+		},
+		"cooldown": 1
+	},
+	
+	"glitter_stuck_d": {
+		"type": "origins:damage_over_time",
+		"interval": 30,
+		"damage": 1,
+		"damage_source": {
+			"name": "generic",
+			"unblockable": true,
+			"bypasses_armor": true
+		},
+		"condition": {
+			"type": "origins:resource",
+			"resource": "*:*_glitter_stuck_r",
+			"comparison": "==",
+			"compare_to": 1	
+		}
+	},
+	
+	"name": "§6Glitter §7mode ",
+	"description": "§2+ §rIn this mode you can fire glitter/fireworks on people when pressing the §nsecondary key§r. You have a bar that gets filled it shows how much glitter you have left the max is 7. The bar will be replenished with one glitter per 30 seconds.\nWhen you find this too slow you can refill it yourself by holding a firework in your off-hand, §nshifting§r and pressing the §nsecondary key§r\n§4-§rYou sometimes choke on your glitter and you will neat to take fall damage or get a pat on the back to get the glitter to lose!\n"
+}
+

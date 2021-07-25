@@ -1,0 +1,2 @@
+execute as @a[tag=nbs_Eveningpar] run scoreboard players operation @s nbs_Eveningpar += speed nbs_Eveningpar
+execute as @a[tag=nbs_Eveningpar] at @s run function pixel_ninja:music/evening_party/tree/0_1023

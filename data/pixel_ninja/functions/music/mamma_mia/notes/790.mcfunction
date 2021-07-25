@@ -1,0 +1,3 @@
+playsound minecraft:block.note_block.harp master @s ^0 ^ ^ 1 1.259921 1
+playsound minecraft:block.note_block.guitar master @s ^0 ^ ^ 1 0.890899 1
+function pixel_ninja:music/mamma_mia/stop
